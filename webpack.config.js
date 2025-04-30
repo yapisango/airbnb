@@ -1,32 +1,35 @@
+const path = require("path");
+
 module.exports = {
-  "output": {
-    "filename": "[name].pack.js"
+  entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "dist"),
+    filename: "main.js"
   },
-  "resolve": {
-    "extensions": [
-      ".js",
-      ".json"
-    ],
-    "alias": {}
-  },
-  "module": {
-    "rules": [
+  module: {
+    rules: [
       {
-        "use": {
-          "loader": "babel-loader",
-          "options": {
-            "presets": [
-              "babel-preset-env",
-              "babel-preset-react"
-            ]
-          }
-        },
-        "exclude": /node_modules/,
-        "test": /\.js$/
+        test: /\.(js|jsx)$/, 
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        type: "asset/resource"
       }
     ]
   },
-  "entry": {
-    "index": "./index"
-  }
-}
+  resolve: {
+    extensions: [".js", ".jsx"]
+  },
+  devServer: {
+    static: path.resolve(__dirname, "public"), 
+    port: 3000,
+    open: true,       
+  },
+  mode: "development"
+};
+
+
