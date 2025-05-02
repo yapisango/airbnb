@@ -1,4 +1,4 @@
-/*import React from "react";
+import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
@@ -34,14 +34,5 @@ export default function App() {
       </section>
     </div>
   );
-}*/
-
-
-export default function App() {
-    return (
-      <h1 style={{ color: "green", textAlign: "center" }}>
-        ✅ React is working!
-      </h1>
-    );
-  }
+}
   
