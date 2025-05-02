@@ -9,11 +9,15 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/, 
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
         }
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"]
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
@@ -25,11 +29,12 @@ module.exports = {
     extensions: [".js", ".jsx"]
   },
   devServer: {
-    static: path.resolve(__dirname, "public"), 
+    static: path.resolve(__dirname, "public"),
     port: 3000,
-    open: true,       
+    open: true
   },
   mode: "development"
 };
+
 
 

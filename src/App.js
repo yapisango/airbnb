@@ -1,30 +1,47 @@
-import React from "react"
-import Navbar from "./components/Navbar"
-import Hero from "./components/Hero"
-import Card from "./components/Card"
-import data from "./data"
-
-
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals
+/*import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Card from "./components/Card";
+import data from "./data";
+import { useTranslation } from "react-i18next";
 
 export default function App() {
-    const cards = data.map(item => {
-        return (
+    console.log("App component rendered")
+  const { t } = useTranslation();
+
+  const cards = data.map(item => {
+    return (
+        <>
+            <div>
+                <h1>Hello from App</h1>
+            </div>
+            <h1 style={{ color: "red" }}>If you see this, App is rendering!</h1>
             <Card
                 key={item.id}
                 {...item}
-                
             />
-        )
-    })        
-    
+      </>
+    );
+  });
+
+  return (
+    <div>
+      <Navbar />
+      <Hero />
+      <h1>{t('welcome_message')}</h1> 
+      <section className="cards-list">
+        {cards}
+      </section>
+    </div>
+  );
+}*/
+
+
+export default function App() {
     return (
-        <div>
-            <Navbar />
-            <Hero />
-            <section className="cards-list">
-                {cards}
-            </section>
-        </div>
-    )
-}
+      <h1 style={{ color: "green", textAlign: "center" }}>
+        ✅ React is working!
+      </h1>
+    );
+  }
+  
