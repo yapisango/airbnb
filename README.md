@@ -3,7 +3,7 @@
 A modern Airbnb-inspired web app built with React, featuring dynamic filtering, search functionality, and a clean UI.
 
 🔗 Live Demo: [Add your Netlify link here]
-🔗 GitHub Repo: https://github.com/yapisango/airbnb
+🔗 GitHub Repo: https://github.com/yapisango/airbnb.git
 
 ---
 

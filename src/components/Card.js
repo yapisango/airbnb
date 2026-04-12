@@ -1,11 +1,12 @@
 import React from "react";
-import starIcon from "../images/star.png"; // ✅ Import the image
+import starIcon from "../images/star.png";
 
-export default function Card(props) {
+export default function Card({ coverImg, stats, location, title, price, openSpots, description }) {
+
     let badgeText;
-    if (props.openSpots === 0) {
+    if (openSpots === 0) {
         badgeText = "SOLD OUT";
-    } else if (props.location === "Online") {
+    } else if (location === "Online") {
         badgeText = "ONLINE";
     }
 
@@ -14,22 +15,29 @@ export default function Card(props) {
             {badgeText && <div className="card--badge">{badgeText}</div>}
 
             <img 
-                src={props.coverImg} 
-                alt={props.title} 
+                src={coverImg} 
+                alt={title} 
                 className="card--image" 
             />
 
             <div className="card--stats">
-                <img src={starIcon} className="card--star" /> {/* ✅ FIXED */}
-                <span>{props.stats.rating}</span>
-                <span className="gray">({props.stats.reviewCount}) • </span>
-                <span className="gray">{props.location}</span>
+                <img 
+                    src={starIcon} 
+                    alt="rating star" 
+                    className="card--star" 
+                />
+                <span>{stats.rating}</span>
+                <span className="gray">({stats.reviewCount}) • </span>
+                <span className="gray">{location}</span>
             </div>
 
-            <p className="card--title">{props.title}</p>
+            <p className="card--title">{title}</p>
+
             <p className="card--price">
-                <span className="bold">From ${props.price}</span> / person
+                <span className="bold">From ${price}</span> / person
             </p>
+
+            <p className="card--desc">{description}</p>
         </div>
     );
 }

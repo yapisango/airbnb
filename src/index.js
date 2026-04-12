@@ -11,12 +11,16 @@ i18next
   .init({
     resources: translations,
     lng: 'en-GB',
+    fallbackLng: 'en',
     interpolation: {
       escapeValue: false
     }
   })
   .then(() => {
     const container = document.getElementById('root');
+
+    if (!container) throw new Error("Root container missing");
+    
     const root = createRoot(container);
 
     root.render(
