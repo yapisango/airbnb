@@ -2,7 +2,7 @@
 
 A modern Airbnb-inspired web app built with React, featuring dynamic filtering, search functionality, and a clean UI.
 
-🔗 Live Demo: [Add your Netlify link here]
+🔗 Live Demo: https://yapisango-travel-app.netlify.app
 🔗 GitHub Repo: https://github.com/yapisango/airbnb.git
 
 ---
@@ -77,5 +77,5 @@ Sango Mabhuti Yapi
 
 💼 Frontend Developer
 🌍 Johannesburg, South Africa
-🔗 LinkedIn: [Add your LinkedIn]
+🔗 LinkedIn: https://www.linkedin.com/in/sango-yapi
 🐙 GitHub: https://github.com/yapisango
